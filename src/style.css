@@ -1,17 +1,176 @@
 @import "tailwindcss";
 
 @theme {
-  --color-brand: #6366f1;
-  --color-brand-dark: #4f46e5;
+  --font-ms-sans: "MS Sans Serif", "Segoe UI", Tahoma, Geneva, Verdana,
+    sans-serif;
+  --font-arial-black: "Arial Black", Impact, Haettenschweiler, sans-serif;
+  --font-courier: "Courier New", Courier, monospace;
+
+  --color-win-bg: #c0c0c0;
+  --color-win-fg: #000000;
+  --color-win-muted: #808080;
+  --color-win-accent: #0000ff;
+  --color-win-secondary: #ff0000;
+  --color-win-tertiary: #ffff00;
+  --color-win-success: #00ff00;
+  --color-win-success-dark: #00aa00;
+  --color-win-navy: #000080;
+  --color-win-blue-light: #1084d0;
+  --color-win-panel: #ffffcc;
+  --color-win-border-light: #ffffff;
+  --color-win-border-dark: #808080;
+  --color-win-highlight: #dfdfdf;
+  --color-win-shadow-dark: #404040;
 }
 
-:root {
-  font-family: "Inter", system-ui, -apple-system, sans-serif;
-  background-color: #0f172a;
-  color: #f8fafc;
+@utility bg-90s-tile {
+  background-color: #c0c0c0;
+  background-image: linear-gradient(45deg, #b8b8b8 25%, transparent 25%),
+    linear-gradient(-45deg, #b8b8b8 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #b8b8b8 75%),
+    linear-gradient(-45deg, transparent 75%, #b8b8b8 75%);
+  background-size: 4px 4px;
+  background-position: 0 0, 0 2px, 2px -2px, -2px 0px;
 }
 
-body {
-  margin: 0;
-  min-height: 100vh;
+@utility bg-construction {
+  background: repeating-linear-gradient(
+    45deg,
+    #ffff00,
+    #ffff00 10px,
+    #000000 10px,
+    #000000 20px
+  );
+}
+
+@utility hr-groove {
+  border: none;
+  height: 4px;
+  background: linear-gradient(
+    to bottom,
+    #808080 0%,
+    #808080 50%,
+    #ffffff 50%,
+    #ffffff 100%
+  );
+}
+
+@utility win-outset {
+  border: 2px solid;
+  border-color: #ffffff #808080 #808080 #ffffff;
+  box-shadow: inset -1px -1px 0 #404040, inset 1px 1px 0 #dfdfdf;
+}
+
+@utility win-inset {
+  border: 2px solid;
+  border-color: #808080 #ffffff #ffffff #808080;
+  box-shadow: inset 1px 1px 0 #404040, inset -1px -1px 0 #dfdfdf;
+}
+
+@utility win-titlebar {
+  background: linear-gradient(to right, #000080, #1084d0);
+  color: white;
+  font-weight: bold;
+  padding: 4px 8px;
+}
+
+@layer base {
+  :root {
+    font-family: var(--font-ms-sans);
+    background-color: var(--color-win-bg);
+    color: var(--color-win-fg);
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+  }
+
+  selection {
+    background-color: var(--color-win-navy);
+    color: white;
+  }
+
+  a {
+    color: #0000ff;
+    text-decoration: underline;
+  }
+
+  a:visited {
+    color: #800080;
+  }
+
+  a:hover {
+    color: #ff0000;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-arial-black);
+    text-transform: uppercase;
+  }
+}
+
+@keyframes rainbow {
+  0% {
+    color: #ff0000;
+  }
+  17% {
+    color: #ff8000;
+  }
+  33% {
+    color: #ffff00;
+  }
+  50% {
+    color: #00ff00;
+  }
+  67% {
+    color: #0080ff;
+  }
+  83% {
+    color: #8000ff;
+  }
+  100% {
+    color: #ff0000;
+  }
+}
+
+@utility text-rainbow {
+  animation: rainbow 4s linear infinite;
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.7);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px 2px rgba(255, 0, 0, 0.5);
+  }
+}
+
+@utility animate-pulse-glow {
+  animation: pulse-glow 1.5s ease-in-out infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@utility animate-marquee {
+  display: inline-block;
+  padding-left: 100%;
+  animation: marquee 15s linear infinite;
+}
+
+@utility win-btn {
+  @apply win-outset px-4 py-2 font-bold uppercase tracking-wide bg-win-bg active:win-inset active:translate-x-[1px] active:translate-y-[1px] focus-visible:outline-dotted focus-visible:outline-2 focus-visible:outline-black focus-visible:outline-offset-2 transition-none;
 }
