@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - Wawasan Hosting</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body class="bg-90s-tile selection:bg-win-navy selection:text-white">
+    <div id="app" class="max-w-5xl mx-auto p-4 md:p-8 space-y-8">
+      <!-- Top Marquee -->
+      <div
+        class="win-inset bg-black text-win-success overflow-hidden h-8 flex items-center"
+      >
+        <div class="animate-marquee whitespace-nowrap font-courier text-lg">
+          *** NEED HELP? CALL OUR 24/7 SUPPORT HOTLINE: 1-800-WAWASAN *** EMAIL
+          US AT: SUPPORT@WAWASAN-HOSTING.COM.MY *** VISIT OUR OFFICE IN
+          CYBERJAYA! ***
+        </div>
+      </div>
+
+      <!-- Header / Logo Area -->
+      <header class="text-center py-8 space-y-4">
+        <h1
+          class="text-6xl md:text-8xl text-rainbow tracking-tighter drop-shadow-[4px_4px_0px_#000000]"
+        >
+          WAWASAN HOSTING
+        </h1>
+        <p class="font-arial-black text-xl italic text-win-navy">
+          "Connecting Malaysia to the World Wide Web!"
+        </p>
+      </header>
+
+      <div class="hr-groove"></div>
+
+      <!-- Main Content Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+        <!-- Sidebar Navigation -->
+        <aside class="md:col-span-1 space-y-4">
+          <div class="win-outset bg-win-bg">
+            <div class="win-titlebar">Navigation</div>
+            <nav class="p-4 flex flex-col space-y-2 font-bold">
+              <a href="/index.html">Home</a>
+              <a href="/pricing.html">Hosting Plans</a>
+              <a href="/about.html">About Us</a>
+              <a href="/contact.html" class="text-win-secondary">Contact Us</a>
+              <a href="#">Domain Search</a>
+              <a href="#">Guestbook</a>
+            </nav>
+          </div>
+
+          <div class="win-outset bg-win-bg">
+            <div class="win-titlebar">ICQ Status</div>
+            <div class="p-4 text-center space-y-2">
+              <div
+                class="win-inset bg-white p-2 flex items-center justify-center space-x-2"
+              >
+                <img
+                  src="https://web.archive.org/web/20090830022312/http://geocities.com/Athens/Olympus/3120/icq.gif"
+                  alt="ICQ"
+                  class="h-6"
+                />
+                <span class="font-bold text-win-success-dark">ONLINE</span>
+              </div>
+              <p class="text-xs">UIN: 12345678</p>
+            </div>
+          </div>
+
+          <!-- Hit Counter -->
+          <div class="win-outset bg-win-bg text-center p-4">
+            <div class="win-titlebar mb-2">Page Visits</div>
+            <div
+              class="win-inset bg-black text-win-success font-courier text-2xl p-2 inline-block"
+            >
+              0 0 0 0 4 5 2
+            </div>
+          </div>
+        </aside>
+
+        <!-- Main Body -->
+        <main class="md:col-span-3 space-y-8">
+          <!-- Intro Card -->
+          <div class="win-outset bg-win-bg">
+            <div class="win-titlebar">Contact Information</div>
+            <div class="p-6 bg-white win-inset space-y-6 m-2">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="space-y-4">
+                  <h3 class="text-win-navy border-b-2 border-win-muted">
+                    Our Address
+                  </h3>
+                  <address class="not-italic text-sm leading-loose">
+                    Wawasan Hosting Services Sdn Bhd<br />
+                    Level 12, Menara Cyberjaya<br />
+                    Persiaran Multimedia<br />
+                    63000 Cyberjaya, Selangor<br />
+                    Malaysia
+                  </address>
+                </div>
+                <div class="space-y-4">
+                  <h3 class="text-win-navy border-b-2 border-win-muted">
+                    Quick Contact
+                  </h3>
+                  <ul class="text-sm space-y-2">
+                    <li><b>Phone:</b> +60 3-8312 0000</li>
+                    <li><b>Fax:</b> +60 3-8312 1111</li>
+                    <li><b>Email:</b> info@wawasan-hosting.com.my</li>
+                    <li><b>Support:</b> support@wawasan-hosting.com.my</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="win-outset bg-win-bg">
+            <div class="win-titlebar">Send us an Email (CGI Form)</div>
+            <form class="p-6 bg-win-bg space-y-4 m-2">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="space-y-1">
+                  <label class="text-xs font-bold uppercase">Your Name:</label>
+                  <input
+                    type="text"
+                    class="win-inset w-full p-2 bg-white"
+                    required
+                  />
+                </div>
+                <div class="space-y-1">
+                  <label class="text-xs font-bold uppercase">Your Email:</label>
+                  <input
+                    type="email"
+                    class="win-inset w-full p-2 bg-white"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="space-y-1">
+                <label class="text-xs font-bold uppercase">Subject:</label>
+                <select class="win-inset w-full p-2 bg-white">
+                  <option>Sales Inquiry</option>
+                  <option>Technical Support</option>
+                  <option>Billing Question</option>
+                  <option>Domain Registration</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div class="space-y-1">
+                <label class="text-xs font-bold uppercase">Message:</label>
+                <textarea
+                  class="win-inset w-full p-2 bg-white h-32"
+                  required
+                ></textarea>
+              </div>
+              <div class="flex space-x-2">
+                <button
+                  type="submit"
+                  class="win-btn bg-win-success-dark text-white"
+                >
+                  Submit Form
+                </button>
+                <button type="reset" class="win-btn">Reset</button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Map Section -->
+          <div class="win-outset bg-win-bg">
+            <div class="win-titlebar">Our Location Map</div>
+            <div class="p-2">
+              <div
+                class="win-inset bg-win-muted relative h-64 overflow-hidden flex items-center justify-center"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=800&q=80"
+                  alt="Cyberjaya Map"
+                  class="absolute inset-0 w-full h-full object-cover filter grayscale sepia"
+                />
+                <div
+                  class="relative z-10 bg-win-tertiary p-2 win-outset font-bold text-black animate-pulse"
+                >
+                  WE ARE HERE!
+                </div>
+              </div>
+              <p class="text-[10px] text-center mt-2 italic">
+                Map optimized for Netscape Navigator 4.08
+              </p>
+            </div>
+          </div>
+        </main>
+      </div>
+
+      <div class="hr-groove"></div>
+
+      <!-- Footer -->
+      <footer class="text-center space-y-4 py-8">
+        <div class="flex justify-center items-center space-x-8">
+          <img
+            src="https://web.archive.org/web/20091024223258/http://geocities.com/SiliconValley/Pines/5495/img/ie_button.gif"
+            alt="IE Best Viewed"
+            class="win-outset"
+          />
+          <img
+            src="https://web.archive.org/web/20091024223258/http://geocities.com/SiliconValley/Pines/5495/img/ns_button.gif"
+            alt="Netscape Best Viewed"
+            class="win-outset"
+          />
+        </div>
+        <p class="text-xs font-courier">
+          Copyright &copy; 1997-1999 Wawasan Hosting Services Sdn Bhd.<br />
+          An MSC Status Company. Best viewed in 800x600 resolution with 16-bit
+          color.
+        </p>
+        <div
+          class="inline-block p-1 bg-black text-win-success font-courier win-inset text-[10px]"
+        >
+          PROUDLY HOSTED ON WINDOWS NT 4.0
+        </div>
+      </footer>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
