@@ -1,5 +1,9 @@
 Please call me Cikgu Fathur
 
+# Navigation
+
+When you create new page or update link in page, always update the link in others html page inside project.
+
 # Design implementation
 
 <role>
