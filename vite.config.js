@@ -1,7 +1,7 @@
 import { defineConfig } from "vite";
 import tailwindcss from "@tailwindcss/vite";
 
-export default defineConfig(({ mode }) => ({
-  base: mode === "production" ? "/learnvite/" : "/",
+export default defineConfig(({ command }) => ({
+  base: command === "build" ? "/learnvite/" : "/",
   plugins: [tailwindcss()],
 }));
